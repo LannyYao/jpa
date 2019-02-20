@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: jpa-demo
+  http:
+    converters:
+      preferred-json-mapper: gson
+  datasource:
+      url: jdbc:mysql://localhost:3306/jpa_demo?createDatabaseIfNotExist=true&useSSL=false
+      username: root
+      password: pwd
+      platform: mysql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+
+server:
+  port: 8080
